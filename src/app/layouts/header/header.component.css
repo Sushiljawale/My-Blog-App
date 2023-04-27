@@ -1,0 +1,11 @@
+header{
+    height: 100px;
+}
+
+.site-logo{
+    /* padding: 5PX 20PX;
+    border-radius: 20PX;
+    background-color: rgb(62, 231, 175);
+    color:darkcyan; */
+    font-size: 1.5em;
+}

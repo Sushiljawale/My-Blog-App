@@ -1,0 +1,11 @@
+.contact-img{
+    size: 130px;
+    width: 130px;
+    border-radius: 20%;
+    float:right;
+}
+
+.icon-container {
+    float: right;
+    -o-animation-fill-mode: backwards;
+  }

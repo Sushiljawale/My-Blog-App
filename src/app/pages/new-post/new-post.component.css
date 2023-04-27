@@ -1,0 +1,17 @@
+.form-area
+{
+    text-align: center;
+    
+}
+
+.preview-area{
+    text-align: center;
+}
+
+.add-background{
+    background-color: rgb(165, 223, 203);
+    padding: 5px;
+}
+.img{
+    size: 400%;
+}

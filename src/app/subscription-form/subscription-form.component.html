@@ -1,0 +1,59 @@
+<div class="flex-container">
+<div class="card shadow-effect">
+    <div class="card-body">
+        <div class="text-center">
+            <h3>SUBSCRIPTION FORM</h3>
+            <p class="m-auto subs-text">Bootstraps' form controls expand on our Rebooted form styles with classes.Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.</p> <br>
+
+            <div class="alert alert-danger mt-3" *ngIf='!isEmailError'>
+               email is already used ...
+            </div>
+            
+            <div class="alert alert-info mt-3" *ngIf='!isSubscribed'>
+                Thank you for subscribed. stay tunend for Awsome blog Post...!
+            </div>
+
+            
+     <form  class="form-inline mt-1" #subForm= "ngForm" (ngSubmit)="onSubmit(subForm.value)" *ngIf="isSubscribed">
+                <div class="form-group justify-content-center" style="display: flex;"> 
+                 <input type="text" 
+                    class="form-control" 
+                    placeholder="your name"
+                    name="name" 
+                    #Name='ngModel'
+                    ngModel
+                    required
+                    [ngClass]="{'is-invalid':Name.touched && Name.invalid}">
+                    
+                   
+                    <div class="text-danger" *ngIf='Name.touched && Name.invalid'><br>
+                        <div *ngIf="Name.errors?.['required']">Name is required</div>
+                    </div>
+               
+                    
+                     &nbsp;&nbsp;&nbsp;
+
+                    <input type="email" class="form-control"
+                     placeholder="email address"
+                     name="email"
+                     #Email='ngModel'
+                     ngModel
+                     required
+                     email
+                     [ngClass]="{'is-invalid':Email.touched && Email.invalid}"> 
+
+                     <div class="text-danger" *ngIf="Email.touched && Email.invalid"><br>
+                        <div *ngIf="Email.errors?.['required']">Email is Required</div>
+                       <div *ngIf="Email.errors?.['email']">please enter valid email</div>
+                     </div>
+ 
+
+                      &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn btn-info btn-block btn-sub" [disabled]="subForm.invalid"  routerLink="new-post"> SUBSCRIPTION</button>
+                </div>
+            </form>
+       
+        </div>
+    </div>
+</div>
+</div>
